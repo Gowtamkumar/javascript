@@ -14,6 +14,7 @@ const newAdd = add();
 console.dir(newAdd);
 newAdd();
 console.dir(newAdd);
+
 newAdd();
 console.dir(newAdd);
 newAdd();
