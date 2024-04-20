@@ -45,16 +45,35 @@ class BinarySeaerchTree {
       }
     }
   }
+
+  search(root, value){
+    if(!root){
+      return false
+    }else{
+      if(root.value === value){
+        return true
+      }else if(root.value > value){
+       return this.search(root.left, value)
+      }else{
+       return this.search(root.right, value)
+      }
+    }
+  }
 }
 
-const results = new BinarySeaerchTree();
+const res = new BinarySeaerchTree();
 
-results.insert(10);
-results.insert(30);
-results.insert(30);
-results.insert(5);
+res.insert(8);
+res.insert(3);
+res.insert(10);
+res.insert(1);
+res.insert(6);
+res.insert(14);
+res.insert(4);
+res.insert(7);
+res.insert(13);
 
-console.log("🚀 ~ results:", results);
+console.log("🚀 ~ res:", res.search(res.root, 90));
 
 // binary tree traversal
 // 1.preorder traversal
