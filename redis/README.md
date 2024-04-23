@@ -1,5 +1,5 @@
 # Redis commoned
-
+    redis-cli ping
 ## redis server Start
 
     redis-server &
