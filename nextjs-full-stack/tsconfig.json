@@ -2,7 +2,6 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true, //for typeorm
     "experimentalDecorators": true, //for typeorm
-    "strictPropertyInitialization": false,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -29,8 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "typeorm/todos/photo-entity.js"
+    "auth.tct"
   ],
-
   "exclude": ["node_modules"]
 }
