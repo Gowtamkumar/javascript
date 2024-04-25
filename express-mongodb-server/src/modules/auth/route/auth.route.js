@@ -7,7 +7,6 @@ const {
   getUser,
   deleteUser,
   logout,
-  forgetPassword,
   forgotPassword,
   resetPassword,
   updatePassword,
