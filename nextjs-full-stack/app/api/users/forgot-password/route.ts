@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { UsersEntity } from "@/models/users/user.entity";
+import { UserEntity } from "@/models/users/user.entity";
 import { getDBConnection } from "@/config/db/dbconnection";
 import { v4 as uuidv4 } from "uuid";
 import { forgotPasswordDto } from "@/models/users/dtos/forgot.dto";
@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
   const host = request.nextUrl.host;
 
   const token = uuidv4();
-  const user = connection.getRepository(UsersEntity);
+  const user = connection.getRepository(UserEntity);
   const finduser = await user.findOneBy({ email: data.email });
 
   if (!finduser) {

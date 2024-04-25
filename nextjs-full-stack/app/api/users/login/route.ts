@@ -1,13 +1,13 @@
 import { matchPassword } from "@/middlewares/auth.middleware";
 import { getDBConnection } from "@/config/db/dbconnection";
-import { UsersEntity } from "@/models/users/user.entity";
+import { UserEntity } from "@/models/users/user.entity";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request, response: Response) {
   const connection = await getDBConnection();
   const data = await request.json();
 
-  const user = await connection.getRepository(UsersEntity);
+  const user = await connection.getRepository(UserEntity);
 
   const oldUser = await user.findOne({
     where: { username: data.username },

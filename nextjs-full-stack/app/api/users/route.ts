@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import { UsersEntity } from "@/models/users/user.entity";
 import { getDBConnection } from "@/config/db/dbconnection";
 import { hashedPassword } from "@/middlewares/auth.middleware";
 import { UserValidationSchema } from "@/validation";
 import { CreateUserDto } from "@/models/users/dtos";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/authOption";
+import { UserEntity } from "@/models/users/user.entity";
 
 export async function POST(request: Request) {
   const connection = await getDBConnection();
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     });
   }
 
-  const user = connection.getRepository(UsersEntity);
+  const user = connection.getRepository(UserEntity);
 
   const userChecking = await user.findOne({
     where: { username: data.username },
@@ -68,7 +68,7 @@ export async function POST(request: Request) {
  */
 export async function GET(request: Request): Promise<any> {
   const connection = await getDBConnection();
-  const user = await connection.getRepository(UsersEntity);
+  const user = await connection.getRepository(UserEntity);
 
   // User authentication and role verification
   const session: any = await getServerSession(authOptions);
@@ -97,6 +97,7 @@ export async function GET(request: Request): Promise<any> {
       role: true,
       status: true,
     },
+    
   });
 
   return NextResponse.json({

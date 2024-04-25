@@ -61,19 +61,15 @@ export async function POST(request: Request) {
   });
 }
 
-/**
- * Get all order
- * api/order
- * @export
- * @param {Request} request
- * @return {*}
- */
-export async function GET(request: Request): Promise<any> {
+export async function GET(request: Request) {
+  console.log("up");
   const connection = await getDBConnection();
-  const createRepo = await connection.getRepository(OrderEntity);
+
+  const orderRepository = await connection.getRepository(OrderEntity);
+  console.log("down");
 
   // discount authentication and role verification
-  const session: any = await getServerSession(authOptions);
+  // const session: any = await getServerSession(authOptions);
   // // Check if the discount is authenticated
   // if (!session) {
   //   return NextResponse.json({
@@ -90,7 +86,7 @@ export async function GET(request: Request): Promise<any> {
   //   });
   // }
 
-  const result = await createRepo.find();
+  const result = await orderRepository.find();
 
   return NextResponse.json({
     status: 200,

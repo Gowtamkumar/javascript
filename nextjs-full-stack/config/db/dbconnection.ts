@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import { UsersEntity } from "@/models/users/user.entity";
+import { UserEntity } from "@/models/users/user.entity";
 import { FileEntity } from "@/models/file/file.entity";
 import { evnFileValidationSchema } from "../../validation/fileValidation";
 import { ProductEntity } from "@/models/products/product.entity";
@@ -41,7 +41,9 @@ const dbConnection = new DataSource({
   synchronize: true,
   logging: false,
   entities: [
-    UsersEntity,
+    OrderItemEntity,
+    OrderEntity,
+    UserEntity,
     FileEntity,
     ProductEntity,
     ProductVariantEntity,
@@ -50,8 +52,6 @@ const dbConnection = new DataSource({
     CategoriesEntity,
     WishListEntity,
     BrandEntity,
-    OrderEntity,
-    OrderItemEntity,
   ],
   subscribers: [],
   migrations: [],

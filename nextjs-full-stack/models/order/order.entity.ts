@@ -4,13 +4,16 @@ import {
   CreateDateColumn,
   Entity,
   Generated,
+  JoinColumn,
   OneToMany,
+  OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
 import { OrderStatus } from "./enums/order-status.enum";
 import { PaymentStatus, PaymentTypeStatus } from "./enums";
 import { OrderItemEntity } from "../order-item/order-item.entity";
+import { UserEntity } from "../users/user.entity";
 
 @Entity("orders")
 export class OrderEntity {
@@ -82,6 +85,9 @@ export class OrderEntity {
 
   @Column({ name: "user_id", nullable: true })
   userId?: string;
+  @OneToOne(() => UserEntity)
+  @JoinColumn()
+  user!: UserEntity;
 
   @CreateDateColumn({ name: "created_at", type: "timestamp" })
   createdAt?: string;
@@ -89,10 +95,7 @@ export class OrderEntity {
   @UpdateDateColumn({ name: "updated_at", type: "timestamp" })
   updatedAt?: string;
 
-  // // // relations
-  // @OneToMany(() => OrderItemEntity, (orderitem) => orderitem.order)
+  // // relations
+  // @OneToMany(() => OrderItemEntity, (orderitems) => orderitems.order)
   // orderItems!: OrderItemEntity[];
-
-  // @OneToMany(() => OrderItemEntity, (orderItem) => orderItem.order)
-  // orderItems?: OrderItemEntity[];
 }

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { UsersEntity } from "@/models/users/user.entity";
+import { UserEntity } from "@/models/users/user.entity";
 import { getDBConnection } from "@/config/db/dbconnection";
 import { hashedPassword } from "@/middlewares/auth.middleware";
 
@@ -9,7 +9,7 @@ export async function PATCH(request: NextRequest, context: any) {
   const connection = await getDBConnection();
   const data = await request.json();
   const newPassword = await hashedPassword(data.password);
-  const user = connection.getRepository(UsersEntity);
+  const user = connection.getRepository(UserEntity);
 
   const finduser = await user.findOneBy({
     resetToken: token,

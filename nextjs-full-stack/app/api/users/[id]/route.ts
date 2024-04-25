@@ -1,6 +1,6 @@
 import { getDBConnection } from "@/config/db/dbconnection";
 import { UpdateUserDto } from "@/models/users/dtos";
-import { UsersEntity } from "@/models/users/user.entity";
+import { UserEntity } from "@/models/users/user.entity";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request, context: any) {
@@ -9,7 +9,7 @@ export async function GET(request: Request, context: any) {
     params: { id },
   } = context;
 
-  const user = await connection.getRepository(UsersEntity);
+  const user = await connection.getRepository(UserEntity);
   const result = await user.findOneBy({ id });
 
   if (!result) {
@@ -32,7 +32,7 @@ export async function DELETE(request: Request, context: any) {
     params: { id },
   } = context;
 
-  const user = await connection.getRepository(UsersEntity);
+  const user = await connection.getRepository(UserEntity);
 
   const result = await user.findOneBy({ id });
 
@@ -60,7 +60,7 @@ export async function PATCH(request: Request, context: any) {
 
   const data = await request.json();
 
-  const user = await connection.getRepository(UsersEntity);
+  const user = await connection.getRepository(UserEntity);
 
   const result = await user.findOneBy({ id });
 

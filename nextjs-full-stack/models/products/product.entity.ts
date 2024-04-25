@@ -3,9 +3,11 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
+import { OrderItemEntity } from "../order-item/order-item.entity";
 
 @Entity("products")
 export class ProductEntity {
@@ -45,9 +47,12 @@ export class ProductEntity {
   @Column({ type: "boolean", default: true })
   status!: boolean;
 
-  @CreateDateColumn({ name: "created_at",type: "timestamp" })
+  @CreateDateColumn({ name: "created_at", type: "timestamp" })
   createdAt?: string;
 
-  @UpdateDateColumn({ name: "updated_at",type: "timestamp" })
+  @UpdateDateColumn({ name: "updated_at", type: "timestamp" })
   updatedAt?: string;
+
+  // @OneToMany(() => OrderItemEntity, (orderitems) => orderitems.product)
+  // orderItems!: OrderItemEntity[];
 }
