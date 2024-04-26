@@ -22,5 +22,3 @@ export const sendEmail = async (mailOptions: Options) => {
     // console.log(error, "email not sent");
   }
 };
-
-// module.exports = sendEmail;
