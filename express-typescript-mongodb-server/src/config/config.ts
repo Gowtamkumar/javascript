@@ -1,7 +1,6 @@
-const dotenv = require("dotenv");
-const path = require("path");
-const Joi = require("joi");
-// const { env_mode } = require("../enums/common.enum");
+import path from 'path'
+import Joi from 'joi'
+import dotenv from 'dotenv'
 
 dotenv.config({ path: path.join(__dirname, "../../.env") });
 
