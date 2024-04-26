@@ -40,15 +40,17 @@ async function isAuthorize(req, res, next) {
 //set cookies data
 const sendCookiesResponse = (token, res) => {
   let options = {
-    maxAge: 20 * 60 * 1000, // would expire in 20minutes
-    // maxAge: '1d', // would expire in 20minutes
+    maxAge: 20 * 60 * 1000, // would expire in 20 minutes
     httpOnly: true, // The cookie is only accessible by the web server
-    secure: true,
+    secure: false, // Set to true if you're using HTTPS
   };
-  res.status(200).cookie(process.env.COOKIE_NAME, token, options);
-  // .json({ success: true, token }); // set the token to response header, so that the client sends it back on each subsequent request
-};
 
+  // Set the cookie
+  return res.cookie(process.env.COOKIE_NAME, token, options);
+
+  // Optionally, you can also send a response back
+  // res.status(200).json({ success: true, token });
+};
 const getSignJwtToken = () => {
   return jwt.sign({}, config.JWT_SECRET, {
     expiresIn: config.JWT_SECRET,
