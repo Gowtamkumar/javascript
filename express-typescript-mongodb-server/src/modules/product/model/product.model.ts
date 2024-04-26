@@ -12,7 +12,7 @@ interface Product extends Document {
 }
 
 // Define the schema for the Product document
-const productSchema: Schema<any> = new Schema({
+const productSchema: Schema<Product> = new Schema({
   name: {
     type: String,
     required: [true, "Product name is required"],

@@ -1,5 +1,5 @@
 {
-  "name": "express-postgresql-typorm",
+  "name": "express-typescript-mongodb",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",

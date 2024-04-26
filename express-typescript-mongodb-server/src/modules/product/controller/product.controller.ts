@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from "express";
-// import asyncHandler from '../../../middlewares/async.middleware';
 import ProductModel from "../model/product.model";
 import userSchema from "../../auth/model/user.model";
 import { asyncHandler } from "../../../middlewares/async.middleware";
@@ -8,7 +7,7 @@ import { asyncHandler } from "../../../middlewares/async.middleware";
 // @route GET /api/v1/products
 // @access Public
 export const getProducts = asyncHandler(async (req: Request, res: Response) => {
-  const results = await ProductModel.find().populate("user", "name username");
+  const results = await ProductModel.find();
   return res.status(200).json({
     success: true,
     msg: "Get all Products",
@@ -70,26 +69,30 @@ export const updateProduct = asyncHandler(
 // @desc Get active Products
 // @route GET /api/v1/products/active
 // @access Public
-// export const getActiveProducts = asyncHandler(async (req: Request, res: Response) => {
-//   const activeProduct = new ProductModel();
-//   const results = await activeProduct.findActive();
-//   if (!results) {
-//     throw new Error(`Resource not found of id #${req.params.id}`);
-//   }
-//   return res.status(200).json({
-//     success: true,
-//     msg: `Get active products`,
-//     data: results,
-//   });
-// });
+export const getActiveProducts = asyncHandler(
+  async (req: Request, res: Response) => {
+    const activeProduct = new ProductModel() as any;
+    const results = await activeProduct.findActive();
+
+    if (!results) {
+      throw new Error(`Resource not found`);
+    }
+    return res.status(200).json({
+      success: true,
+      msg: `Get active products`,
+      data: results,
+    });
+  }
+);
 
 // @desc Find Products by name
 // @route GET /api/v1/products/findbyname
 // @access Public
 // export const getFindByName = asyncHandler(async (req: Request, res: Response) => {
+
 //   const results = await ProductModel.findByName();
 //   if (!results) {
-//     throw new Error(`Resource not found of id #${req.params.id}`);
+//     throw new Error(`Resource not found`);
 //   }
 //   return res.status(200).json({
 //     success: true,
@@ -102,9 +105,11 @@ export const updateProduct = asyncHandler(
 // @route GET /api/v1/products/queryhelper
 // @access Public
 // export const getQueryHelper = asyncHandler(async (req: Request, res: Response) => {
-//   const results = await ProductModel.find().queryhelper("react");
+//   const product = new ProductModel() as any;
+
+//   const results = product.find().queryhelper("react") as any;
 //   if (!results) {
-//     throw new Error(`Resource not found of id #${req.params.id}`);
+//     throw new Error(`Resource not found`);
 //   }
 //   return res.status(200).json({
 //     success: true,

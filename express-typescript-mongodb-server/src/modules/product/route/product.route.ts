@@ -5,7 +5,7 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
-  // getActiveProducts,
+  getActiveProducts,
   // getFindByName,
   // getQueryHelper,
 } from "../controller/product.controller";
@@ -13,7 +13,7 @@ import {
 const router = express.Router();
 
 router.route("/").get(getProducts).post(createProduct);
-// router.route("/active").get(getActiveProducts);
+router.route("/active").get(getActiveProducts);
 // router.route("/findbyname").get(getFindByName);
 // router.route("/queryhelper").get(getQueryHelper);
 
