@@ -4,9 +4,11 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
+import { ProductEntity } from "../../product/model/product.entity";
 
 @Entity("users")
 export class UserEntity {
@@ -57,4 +59,7 @@ export class UserEntity {
 
   @UpdateDateColumn({ name: "updated_at", type: "timestamp" })
   updatedAt?: string;
+
+  @OneToMany((_type) => ProductEntity, (product) => product.user)
+  products!: ProductEntity[];
 }

@@ -1,8 +1,8 @@
 {
-  "name": "express-typescript-mongodb",
+  "name": "express-typescript-posgresql-typeorm",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.ts",
   "scripts": {
     "build": "npx tsc",
     "start": "node dist/index.js",

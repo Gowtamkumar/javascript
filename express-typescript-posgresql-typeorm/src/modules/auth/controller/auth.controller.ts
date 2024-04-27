@@ -71,7 +71,11 @@ export const getUsers = asyncHandler(
 
     const userRepository = connection.getRepository(UserEntity);
 
-    const results = await userRepository.find(); // populate is relation array data
+    const results = await userRepository.find({
+      relations: {
+        products: true,
+      },
+    }); // populate is relation array data
 
     return res.status(200).json({
       success: true,

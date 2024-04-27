@@ -2,6 +2,7 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 import { UserEntity } from "../modules/auth/model/user.entity";
+import { ProductEntity } from "../modules/product/model/product.entity";
 
 // DB_TYPE="postgres"
 // DB_HOST=127.0.0.1
@@ -19,7 +20,7 @@ const dbConnection = new DataSource({
   database: 'express_ts_posgresq_typeorm',
   synchronize: true,
   logging: false,
-  entities: [UserEntity],
+  entities: [UserEntity, ProductEntity],
   subscribers: [],
   migrations: [],
 });

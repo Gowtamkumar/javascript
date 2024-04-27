@@ -1,5 +1,6 @@
 import { Express, Request, Response, NextFunction } from "express";
 import authRoutes from "../modules/auth/route/auth.route";
+import productRoutes from "../modules/product/route/product.route";
 import { AuthGuard } from "../middlewares/auth.middleware";
 
 // Define the type for the Express application
@@ -16,5 +17,5 @@ type MiddlewareFunction = (
 export const setupRoutes = (app: ExpressApp): void => {
   // app.use("/api/v1/bootcamp", bootcampRoutes);
   app.use("/api/v1/auth", authRoutes);
-  // app.use("/api/v1/products", AuthGuard as MiddlewareFunction, productRoutes);
+  app.use("/api/v1/products", AuthGuard as MiddlewareFunction, productRoutes);
 };
