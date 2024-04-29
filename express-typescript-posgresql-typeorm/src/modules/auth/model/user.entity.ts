@@ -51,8 +51,8 @@ export class UserEntity {
   @Column({ name: "reset_token", nullable: true })
   resetToken?: string;
 
-  @Column({ name: "reset_token_expire", type: "bigint", nullable: true })
-  resetTokenExpire?: number;
+  // @Column({ name: "reset_token_expire", type: "bigint", nullable: true })
+  // resetTokenExpire?: number;
 
   @CreateDateColumn({ name: "created_at", type: "timestamp" })
   createdAt?: string;

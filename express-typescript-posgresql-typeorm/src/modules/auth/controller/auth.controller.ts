@@ -257,7 +257,6 @@ export const resetPassword = asyncHandler(
     const updateData = await userRepository.merge(user, {
       password: newPassword,
       resetToken: null,
-      resetTokenExpire: null,
     });
 
     await userRepository.save(updateData);

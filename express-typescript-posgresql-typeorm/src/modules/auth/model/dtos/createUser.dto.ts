@@ -5,7 +5,6 @@ export interface CreateUserDto {
   username: string;
   password: string;
   resetToken?: string;
-  resetTokenExpire?: number;
   role?: RoleEnum;
   status?: boolean;
 }

@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import express, { Express, Request, Response } from "express";
+import express from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import cors from "cors";
@@ -10,13 +10,14 @@ import { errorHandler } from "./middlewares/errorHandler";
 import { getDBConnection } from "./config/db";
 // all routes
 import { setupRoutes } from "./routes/routes";
-
-const app = express();
-
+import path from "path";
 dotenv.config();
+const app = express();
+// access publice folder for image
+app.use(express.static(path.join(__dirname, "public")));
 
 // Connect to database
-if (process.env.NODE_ENV !== "test") {  
+if (process.env.NODE_ENV !== "test") {
   getDBConnection();
 }
 // middleware
@@ -43,9 +44,9 @@ app.get("/", (req, res) => {
 });
 
 //not found route
-app.get("*", (req, res) => {
-  res.send("Not found route");
-});
+// app.get("*", (req, res) => {
+//   res.send("Not found route, Please right route hite");
+// });
 // Port
 const PORT = process.env.PORT || 5000;
 
