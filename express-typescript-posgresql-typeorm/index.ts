@@ -5,14 +5,15 @@ import morgan from "morgan";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import colors from "colors";
-import { logger } from "./middlewares/logger";
-import { errorHandler } from "./middlewares/errorHandler";
-import { getDBConnection } from "./config/db";
+import { logger } from "./src/middlewares/logger";
+import { errorHandler } from "./src/middlewares/errorHandler";
+import { getDBConnection } from "./src/config/db";
 // all routes
-import { setupRoutes } from "./routes/routes";
+import { setupRoutes } from "./src/routes/routes";
 import path from "path";
 dotenv.config();
 const app = express();
+
 // access publice folder for image
 app.use(express.static(path.join(__dirname, "public")));
 

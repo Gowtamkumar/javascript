@@ -20,6 +20,7 @@ const mainRoutes = require("./src/routes/routes");
 if (process.env.NODE_ENV !== "test") {
   connectdb();
 }
+
 // middleware
 app.use(cookieParser()); // cookie parser when we needed the cookies value then we simply get and set
 app.use(express.json()); // you ensure that your express application can handle json data sent in the request body automatically

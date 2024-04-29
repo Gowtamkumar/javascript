@@ -1,5 +1,7 @@
 # dependencies
 /node_modules
+/dist
+/public
 /.pnp
 .pnp.js
 
@@ -8,7 +10,6 @@
 opp.js
 
 # production
-/dist
 
 # misc
 .DS_Store
