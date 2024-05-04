@@ -91,6 +91,18 @@ class LinkList {
     return this.size;
   }
 
+  reverse() {
+    let prev = null;
+    let curr = this.head;
+    while (curr) {
+      let next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+    return this.head = prev;
+  }
+
   find(v) {
     let current = this.head;
     let result = {};
@@ -119,5 +131,7 @@ res.prepend(40);
 res.prepend(50);
 res.append(60);
 res.insert(22, 4);
-res.remove(4);
-res.print();
+// res.remove(4);
+// res.print();
+const resss = res.reverse()
+console.log(resss);
