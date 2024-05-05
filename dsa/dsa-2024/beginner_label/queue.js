@@ -33,14 +33,6 @@ class Queue {
   print() {
     return this.items.toString();
   }
-
-  // enqueue(value) {
-  //   this.items.push(value);
-  // }
-
-  // dequeue() {
-  //   this.items.shift();
-  // }
 }
 
 const res = new Queue();
@@ -50,9 +42,4 @@ res.enqueue(30);
 res.enqueue(30);
 res.enqueue(30);
 res.enqueue(30);
-
 console.log(res.print());
-// res.dequeue();
-// res.dequeue();
-
-// console.log(res);
