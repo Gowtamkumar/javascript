@@ -108,3 +108,150 @@
       1. Latency
       2. Capacity
 
+
+## day 3 
+  ## topic application scalability
+  ## current sysytme performance
+    1. req-res latency
+        a. 150ms per request avg
+        b. 250ms tail latency
+    2. throughput
+        a. 100 concurrenct request per second
+  ## this position need to scale our system  
+  ## performance vs scaling
+    1. vertical scaling
+    2. horizontal scaling
+ ## how to achieve vertical scaling?
+ ## how to achieve horizontal scaling? (this scaling is perfact for application)
+    a. lead balancing,
+    b. clustering,
+    c. containerization
+    d. auto-scaling
+
+## what is replication?
+
+## scalability principles
+  a. decentralization
+  b. independence
+
+
+  ## A. key aspects of decentralization
+    1. distribution of components
+    2. data distribution
+    3. load distribution
+  ## advantages of decentralization
+    1. inproved scalablity
+    2. fault tolerance
+    3. flexiblity
+
+ ## b. key aspects of independence
+    1. loose coupling
+    2. isolation of concerns
+    3. service-oriented architechture(SOA)
+  ## advantages of independence
+    1. easier maintenance
+    2. scalablity
+    3. parallel development
+   
+
+## load balancer (example: nginx, haproxy)
+  1. order kore
+  2. server security
+  3. balance load
+  4. manage traffice for web server
+  ## key funcation of load balancers
+    a. single ip address
+    b. traffice distribution
+    c. load distribution
+    d. scalablity
+    e. health monitoring,
+    f. session persistence
+    g. ssl termination
+    h. content compression
+    i. global server load balancing
+    j. rate limiting and traffic shaping
+    k. redundancy and failover
+    l. logging and monitoring
+    m. integration with auto-scaling
+   ## use cases of load balancers
+    a. web servers and application
+    b. application servers in multi-tier architechures
+    c. database servers
+    d. content delivery networks(CDN)
+    e. file servers and storage calusters
+    f. mail servers(SMTP, IMAP)
+    g. voice over ip(VOIP) server
+    h. dns load balancing
+    i. streaming services
+    j. api gateways
+    k. hybrid cloud environment
+    l. high-performance computing(HPC) clusters
+
+  ## Software based load balancer
+    1. nginx
+    2. haproxy
+
+
+## reverse proxy as like load balancer moto
+  reverse proxy always server a thake
+
+  ## use cases of reverse proxy
+    1. web application firewall
+    2. content rewriting
+    3. authenticaiton and authorization
+    4. session management
+    5. global server load balancing(GSLB)
+    6. logging and monitoring
+    7. api gateway
+    8. request forading
+    9. load distribution
+    10. ssl termination
+    11. caching
+    12. compression
+    13. security
+    14. web acceleration
+    15. ssl offloading
+    16. 
+note: load balancing vs reverse proxy?
+
+## api gateway 
+ what is api gateway ?
+  ## features of api gateway
+  1. request routing
+  2. authentication and authorization
+  3. request and response
+  4. rate limiting and throtling
+  5. logging and analytics
+  6. caching
+  7. security
+  8. monitoriing and health checks
+  9. api versioning
+  10. distributed tracing
+  ## use cases fo api gateway
+  1. api management
+  2. security and access control
+  3. request transformation and composition
+  4. distributed microservices architecture
+  5. legacy system integration
+  6. cross-origin resource sharing(cors)
+  7. api versioning and evolution
+  8. ingress controller of kubernetes
+  9. gRPC integration
+  10. service mesh integration
+  11. mobile backend as service(MBaaS)
+  12. multi-cloud deployment
+  13. real-time api composition
+  14. global api access
+  15. serverless computing integration
+  16. internet of things(ioT) itegration
+  17. third-party integration
+  18. microservices comunication
+  
+  ## popular api gateways
+  1. kong (remommonded)
+  2. apache APISIX
+  3. tyk
+  4. Ocelot
+  5. Amazon API Gateway
+  6. Azure
+   
