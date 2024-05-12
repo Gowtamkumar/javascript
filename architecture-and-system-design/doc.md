@@ -5,7 +5,7 @@
   3. n tier (we are use this architecture)
   4. modulear monolithic (also we are use this architecture)
   5. microservice
-  6. Event Driven
+  6. event Driven
   7. cloud native
   8. serverless 
 
@@ -211,7 +211,7 @@
     13. security
     14. web acceleration
     15. ssl offloading
-    16. 
+     
 note: load balancing vs reverse proxy?
 
 ## api gateway 
