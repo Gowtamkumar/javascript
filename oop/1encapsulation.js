@@ -13,7 +13,6 @@ class Car {
     this.#age = age;
     this.#skill = skill;
   }
-  carrun;
 
   run() {
     return `I am ${this.#name}. i am running ${this.#speed} mph. i live in ${
