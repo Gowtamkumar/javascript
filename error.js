@@ -34,10 +34,8 @@ try {
   console.log(error);
 }
 
-
 try {
-  Adddlert("error message")
-  
+  Adddlert("error message");
 } catch (error) {
-    console.log(error.message);
+  console.log(error.message);
 }
