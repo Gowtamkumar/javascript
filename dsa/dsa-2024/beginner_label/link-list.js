@@ -100,7 +100,7 @@ class LinkList {
       prev = curr;
       curr = next;
     }
-    return this.head = prev;
+    return (this.head = prev);
   }
 
   find(v) {
@@ -131,7 +131,7 @@ res.prepend(40);
 res.prepend(50);
 res.append(60);
 res.insert(22, 4);
-// res.remove(4);
-// res.print();
-const resss = res.reverse()
+res.remove(4);
+res.print();
+const resss = res.reverse();
 console.log(resss);
