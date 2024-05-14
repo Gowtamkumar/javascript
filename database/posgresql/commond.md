@@ -1,5 +1,5 @@
 start: sudo -u postgres psql
-show database:
+show database;
 -- \l
 
 connect database:
