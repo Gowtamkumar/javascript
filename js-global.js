@@ -13,4 +13,27 @@ let decodeComponent = decodeURIComponent(encodedComponent)
 let x = 10;
 let y = 30;
 let text = "x * y";
-console.log(eval(text));
+// console.log(eval(text));
+
+
+// Infinity
+
+let xI = 1.797693134862315E+308;
+let yX = x * 1.001;
+// console.log("🚀 ~ yI:", typeof yX)
+
+// isFinite
+const isfinite = isFinite(123)
+// console.log(isfinite);
+
+// isNaN
+// console.log(isNaN(333));
+
+// Number
+// console.log(Number(false));
+
+// parseFloat
+console.log(parseFloat(10.550));
+
+// parseInt
+console.log(parseInt("40"));
