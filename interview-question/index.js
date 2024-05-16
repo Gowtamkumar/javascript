@@ -17,7 +17,7 @@ function c() {
 }
 
 const d = (c(), b(), a());
-console.log("🚀 ~ d :", d);
+// console.log("🚀 ~ d :", d);
 
 const example = [9, 8, 7, 6][(1, 2, 3)]; 
 const example2 = [9, 8, 7, 6][(8, 2, 3, 1)];
