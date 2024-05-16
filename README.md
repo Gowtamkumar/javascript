@@ -27,3 +27,7 @@
 𝟭𝟯. 𝗧𝗵𝗿𝗼𝘁𝘁𝗹𝗶𝗻𝗴: This is a technique to control how many times a function can be executed over time.
 
 𝟭𝟰. 𝗣𝗼𝗹𝘆𝗳𝗶𝗹𝗹𝘀: This is code that implements a feature on web browsers that do not support the feature.
+
+15. weakSet:
+16. generator:
+17. weakMap:
