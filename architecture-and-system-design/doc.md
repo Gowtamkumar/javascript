@@ -255,3 +255,13 @@ note: load balancing vs reverse proxy?
   5. Amazon API Gateway
   6. Azure
    
+## day 3.2 
+  ## Replication database
+  # key concept: 
+    1. data replication
+    2. component replication
+       1. stateless
+       2. statefull
+    3. statuful replication database
+   
+###### upto discussion you can million million user can handle #####
