@@ -1,4 +1,4 @@
-# selectionsort:
+## selection sort:
 
 every loop choto thake boror thake sajano
 
@@ -8,7 +8,7 @@ every loop choto thake boror thake sajano
 array: [1,8,5,7,9,2]
 array: [1,2,5,7,8,9]
 
-# bubble sort:
+## bubble sort:
 
 every loop thake choto thake bror krome
 
