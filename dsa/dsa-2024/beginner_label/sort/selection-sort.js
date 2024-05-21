@@ -1,26 +1,27 @@
-const arr = [4, 5, 6, 7, 8, 11];
+const arr = [4, 50, 6, 17, 8, 11];
 
-function selectionSort(arr, len) {
+function selectionSort(arr) {
   let i = 0;
   let j = 0;
-  let index_min;
-  let temp;
-
-  for (i = 0; i < len - 1; i++) {
-    index_min = i;
-    for (j = i + 1; j < len; j++) {
-      if (arr[j] < arr[index_min]) {
-        index_min = j;
+  let max_index;
+  let temp_data;
+  for (i = 0; i < arr.length - 1; i++) {
+    max_index = i;
+    for (j = i + 1; j < arr.length; j++) {
+      if (arr[max_index] > arr[j]) {
+        max_index = j;
       }
     }
 
-    if (index_min != i) {
-      temp = arr[j];
-      arr[i] = arr[index_min];
-      arr[index_min] = temp;
+    if (max_index != j) {
+      temp_data = arr[max_index];
+      arr[max_index] = arr[i];
+      arr[i] = temp_data;
     }
   }
+
   return arr;
 }
 
-console.log(selectionSort(arr, arr.length));
+const result = selectionSort(arr);
+console.log("🚀 ~ result:", result);
