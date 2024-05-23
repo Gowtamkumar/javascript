@@ -265,3 +265,23 @@ note: load balancing vs reverse proxy?
     3. statuful replication database
    
 ###### upto discussion you can million million user can handle #####
+
+## day 4
+## microservice architechture
+  microservice architechture is loose coupliing
+  all module alada alada application hole microservice
+  Individual services:
+    ## as you want to create a business
+    1. R&D
+    2. manufacturing,
+    3. packaging,
+    4. shipping
+    5. collection payment
+    6. sale & marketing,
+    7. customer support
+    8. technology
+how to shift monolithic architechture to microsservice?
+  1. api gatewaya add.
+  2. api gate way kaj hole route defient kora
+  3. every module alala kore fala
+  
