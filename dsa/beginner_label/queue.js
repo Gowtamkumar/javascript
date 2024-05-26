@@ -1,45 +1,45 @@
-// queue dsa is (FIFO)
-class Queue {
-  constructor() {
-    this.items = [];
-    this.size = 0;
-    this.len = 7;
-  }
+// // queue dsa is (FIFO)
+// class Queue {
+//   constructor() {
+//     this.items = [];
+//     this.size = 0;
+//     this.len = 7;
+//   }
 
-  isEmpty() {
-    if (this.size === 0) {
-      console.log("this queue is Empty!");
-    }
-  }
+//   isEmpty() {
+//     if (this.size === 0) {
+//       console.log("this queue is Empty!");
+//     }
+//   }
 
-  enqueue(value) {
-    if (this.len === this.size) {
-      console.log("your queue size full");
-    } else {
-      this.items[this.size] = value;
-      this.size++;
-    }
-  }
+//   enqueue(value) {
+//     if (this.len === this.size) {
+//       console.log("your queue size full");
+//     } else {
+//       this.items[this.size] = value;
+//       this.size++;
+//     }
+//   }
 
-  dequeue() {
-    if (this.isEmpty()) {
-      return this.isEmpty();
-    } else {
-      this.size--;
-      delete this.items[this.size];
-    }
-  }
+//   dequeue() {
+//     if (this.isEmpty()) {
+//       return this.isEmpty();
+//     } else {
+//       this.size--;
+//       delete this.items[this.size];
+//     }
+//   }
 
-  print() {
-    return this.items.toString();
-  }
-}
+//   print() {
+//     return this.items.toString();
+//   }
+// }
 
-const res = new Queue();
+// const res = new Queue();
 
-res.enqueue(20);
-res.enqueue(30);
-res.enqueue(30);
-res.enqueue(30);
-res.enqueue(30);
-console.log(res.print());
+// res.enqueue(20);
+// res.enqueue(30);
+// res.enqueue(30);
+// res.enqueue(30);
+// res.enqueue(30);
+// console.log(res.print());
