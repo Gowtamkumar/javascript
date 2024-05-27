@@ -12,11 +12,11 @@
 
     docker ps --help
 
-## docker image pull request: 
+## docker image pull request:
 
     docker run node
 
-## docker node vesion check: 
+## docker node vesion check:
 
     docker run -it node (it meaning interactive container instancec)
 
@@ -66,14 +66,15 @@ docker run -d -p 3900:4100 --name nodecontainer node
 
     docker rmi imageId
 
+## all local image delete:
+    docker image prune -a
+
 ## attach and detach container:
 
 ## docker single image details show:
-
     docker image inspect imageId
 
 ## docker tag and name:
-
     docker build . -t learn_docker(name):21(tag)
 
 ## docker image push:
@@ -84,7 +85,7 @@ docker run -d -p 3900:4100 --name nodecontainer node
 
     docker pull image_name;
 
-## docker repository tag and name chnage and prepare push docker hub:
+## docker repository tag and name chnage/rename and prepare push docker hub:
 
     docker tag name:tag gowtamkumar/learn-docker(fast local name and tag second docker hub name dite hobe)
     then rename korer por: docker push repositoryname:tagname(gowtamkumar/learn-docker:21)
@@ -92,16 +93,8 @@ docker run -d -p 3900:4100 --name nodecontainer node
 
 ## docker build -t gowtamkumar/learn-docker:tagname
 
-## all local image delete:
-
-    docker image prune -a
-
-## docker volume:
-
-    docker volume --help
 
 ## docker unnecssery file remove
-
 docker system prune -a
 
 ## pwd is route:
@@ -138,22 +131,23 @@ ip a
 
 ## docker architecture
 
-## docker volumes
-
+    
+#### docker volumes
+    docker volume --help
     docker volume create volume name
 
-## docker app to docker mongo connection wiht(mongodb "localhost" replace "host.docker.internal")
 
+
+## docker app to docker mongo connection (mongodb "localhost" replace "host.docker.internal")
     mongodb://localhost:27017/practice_mongodb
     replace to
     mongodb://host.docker.internal:27017/practice_mongodb
 
+## connection database container and app container cross container communication
 
-## connection database container and app container  cross container communication
-   docker run -d --rm -e NODE_ENV="development" -e PORT="3900" -e JWT_SECRET="dfasd" -e JWT_EXPIRES="7d" -e COOKIE_EXPIRES=7 -p 3900:3900 --name node-mongo-container appimage
+docker run -d --rm -e NODE_ENV="development" -e PORT="3900" -e JWT_SECRET="dfasd" -e JWT_EXPIRES="7d" -e COOKIE_EXPIRES=7 -p 3900:3900 --name node-mongo-container appimage
 
     docker container imspect containername then id address sate connection korle done
     mongodb://idAddress:27017/practice_mongodb
 
-
-## 
+##
