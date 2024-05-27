@@ -11,7 +11,7 @@ const app = express();
 const { connectdb } = require("./src/config/db");
 // load env vars
 // dotenv.config({ path: './src/config/config.env' });
-dotenv.config();
+// dotenv.config();
 
 // all routes
 const mainRoutes = require("./src/routes/routes");

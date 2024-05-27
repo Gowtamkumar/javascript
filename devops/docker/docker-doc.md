@@ -1,6 +1,6 @@
 <!-- commend: -->
 <!-- docker basic cheatsheet -->
-<!-- https://aws.plainenglish.io/docker-basic-cheatsheet-011b8ccf78fc?gi=8c58ce1a236a -->
+<!-- https://aws.plainenglish.io/docker-basic-cheatsheet-011b8ccf78fc -->
 
 ## docker import commond
 
@@ -12,9 +12,13 @@
 
     docker ps --help
 
-## docker node version check:
+## docker image pull request: 
 
-    docker run -it node
+    docker run node
+
+## docker node vesion check: 
+
+    docker run -it node (it meaning interactive container instancec)
 
 ## docker build:
 
@@ -70,7 +74,7 @@ docker run -d -p 3900:4100 --name nodecontainer node
 
 ## docker tag and name:
 
-    docker build -t learn_docker(name):21(tag)
+    docker build . -t learn_docker(name):21(tag)
 
 ## docker image push:
 
@@ -123,6 +127,7 @@ ip a
     docker logs -since=2h -f container_id
     docker exec -it container_id bash
     docker pull imagename
+    docker volume ls
 
 ## docker compose commond
 
