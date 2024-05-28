@@ -7,7 +7,7 @@ const asyncHandler = require("../../../middlewares/async.middleware");
 // @access public
 exports.getProducts = asyncHandler(async (req, res, next) => {
   //populate is relation data
-  const results = await ProductModel.find().populate("user", "name username");
+  const results = await ProductModel.find()
   return res.status(200).json({
     success: true,
     msg: "Get all Product",
