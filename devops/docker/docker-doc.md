@@ -45,6 +45,8 @@
 ## docker run background and create container and image
 
 docker run -d -p 3900:4100 --name nodecontainer node
+docker run -p 3900:3900 -d --name feedback-app --rm
+ feadback-server:latest 
 
 ## docker container start:
 
@@ -138,14 +140,23 @@ ip a
 
 
 
+## development mode a enable
+    need to:
+    1. bind mount
+    2. anonymous Volume
+    3. named volume
+
+
+
 ## docker app to docker mongo connection (mongodb "localhost" replace "host.docker.internal")
     mongodb://localhost:27017/practice_mongodb
     replace to
     mongodb://host.docker.internal:27017/practice_mongodb
 
 ## connection database container and app container cross container communication
+ # docker run -d --rm --env-file ./.env -p 3900:3900 --name node-mongo-container appimage
 
-docker run -d --rm -e NODE_ENV="development" -e PORT="3900" -e JWT_SECRET="dfasd" -e JWT_EXPIRES="7d" -e COOKIE_EXPIRES=7 -p 3900:3900 --name node-mongo-container appimage
+ # docker run -d --rm -e NODE_ENV="development" -e PORT="3900" -e JWT_SECRET="dfasd" -e JWT_EXPIRES="7d" -e COOKIE_EXPIRES=7 -p 3900:3900 --name node-mongo-container appimage
 
     docker container imspect containername then id address sate connection korle done
     mongodb://idAddress:27017/practice_mongodb
