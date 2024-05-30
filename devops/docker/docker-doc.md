@@ -46,7 +46,7 @@
 
 docker run -d -p 3900:4100 --name nodecontainer node
 docker run -p 3900:3900 -d --name feedback-app --rm
- feadback-server:latest 
+feadback-server:latest
 
 ## docker container start:
 
@@ -69,14 +69,17 @@ docker run -p 3900:3900 -d --name feedback-app --rm
     docker rmi imageId
 
 ## all local image delete:
+
     docker image prune -a
 
 ## attach and detach container:
 
 ## docker single image details show:
+
     docker image inspect imageId
 
 ## docker tag and name:
+
     docker build . -t learn_docker(name):21(tag)
 
 ## docker image push:
@@ -89,14 +92,16 @@ docker run -p 3900:3900 -d --name feedback-app --rm
 
 ## docker repository tag and name chnage/rename and prepare push docker hub:
 
-    docker tag name:tag gowtamkumar/learn-docker(fast local name and tag second docker hub name dite hobe)
+    docker tag name:tag 
+       exam:  docker tag localrepository  docker hub repostory
+       
     then rename korer por: docker push repositoryname:tagname(gowtamkumar/learn-docker:21)
     node: also you can same name build as like docker hub repository moto:
 
 ## docker build -t gowtamkumar/learn-docker:tagname
 
-
 ## docker unnecssery file remove
+
 docker system prune -a
 
 ## pwd is route:
@@ -133,32 +138,41 @@ ip a
 
 ## docker architecture
 
-    
 #### docker volumes
+
     docker volume --help
     docker volume create volume name
 
-
-
 ## development mode a enable
+
     need to:
     1. bind mount
     2. anonymous Volume
     3. named volume
 
-
-
 ## docker app to docker mongo connection (mongodb "localhost" replace "host.docker.internal")
+
     mongodb://localhost:27017/practice_mongodb
     replace to
     mongodb://host.docker.internal:27017/practice_mongodb
 
 ## connection database container and app container cross container communication
- # docker run -d --rm --env-file ./.env -p 3900:3900 --name node-mongo-container appimage
 
- # docker run -d --rm -e NODE_ENV="development" -e PORT="3900" -e JWT_SECRET="dfasd" -e JWT_EXPIRES="7d" -e COOKIE_EXPIRES=7 -p 3900:3900 --name node-mongo-container appimage
+# docker run -d --rm --env-file ./.env -p 3900:3900 --name node-mongo-container appimage
+
+# docker run -d --rm -e NODE_ENV="development" -e PORT="3900" -e JWT_SECRET="dfasd" -e JWT_EXPIRES="7d" -e COOKIE_EXPIRES=7 -p 3900:3900 --name node-mongo-container appimage
 
     docker container imspect containername then id address sate connection korle done
     mongodb://idAddress:27017/practice_mongodb
 
-##
+## local database show for mongodb;
+
+    mongosh --port 27018
+    show db: 
+        show dbs
+    use db: 
+        use mydatabase
+    show collection: 
+        show collections
+    table data show: 
+        db.products.find()

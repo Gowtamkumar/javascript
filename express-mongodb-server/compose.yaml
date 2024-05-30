@@ -1,20 +1,45 @@
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Docker Compose reference guide at
-# https://docs.docker.com/go/compose-spec-reference/
-
-# Here the instructions define your application as a service called "server".
-# This service is built from the Dockerfile in the current directory.
-# You can add other services your application may depend on here, such as a
-# database or a cache. For examples, see the Awesome Compose repository:
-# https://github.com/docker/awesome-compose
+version: "3"
 services:
-  server:
-    build:
-      context: .
-    environment:
-      NODE_ENV: production
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
     ports:
-      - 3900:3900
+      - "27018:27017"
+    networks:
+      - my_network
+    volumes:
+      - mongo-data:/data/db
+
+  node:
+    build: .
+    container_name: node
+    ports:
+      - "3900:3900"
+    depends_on:
+      - mongodb
+    networks:
+      - my_network
+    volumes:
+      - .:/usr/src/app ## this for development real time update
+    environment:
+      MONGO_URL: mongodb://mongodb:27017/mydatabase
+      PORT: 3900
+      NODE_ENV: development
+
+networks:
+  my_network:
+    driver: bridge
+
+volumes:
+  mongo-data:
+# services:
+#   server:
+#     build:
+#       context: .
+#     environment:
+#       NODE_ENV: production
+#     ports:
+#       - 3900:3900
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to

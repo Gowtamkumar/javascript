@@ -2,9 +2,9 @@ ARG DEFAULT_PORT=3900
 ### Stage 1 ###
 FROM node:21.6.2-alpine3.18
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY package.json /app
+COPY package.json ./
 
 RUN npm install
 # RUN npm run build

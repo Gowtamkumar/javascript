@@ -51,3 +51,5 @@ do {
     i++;
   console.log("aaa",i);
 } while (i < 10);
+
+console.log(10-10*10+10);

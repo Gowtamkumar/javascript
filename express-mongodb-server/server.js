@@ -1,5 +1,5 @@
 const express = require("express");
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
 const morgan = require("morgan");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
@@ -11,7 +11,7 @@ const app = express();
 const { connectdb } = require("./src/config/db");
 // load env vars
 // dotenv.config({ path: './src/config/config.env' });
-dotenv.config();
+// dotenv.config();
 
 // all routes
 const mainRoutes = require("./src/routes/routes");
