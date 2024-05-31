@@ -166,7 +166,6 @@ ip a
     mongodb://idAddress:27017/practice_mongodb
 
 ## local database show for mongodb;
-
     mongosh --port 27018
     show db: 
         show dbs
@@ -176,3 +175,14 @@ ip a
         show collections
     table data show: 
         db.products.find()
+## utility commond
+    # npm: this should be up this server by create a package json file by docker compose
+    #     build: ./
+    #     stdin_open: true
+    #     tty: true
+    #     volumes:
+    #       - ./:/usr/src/ap
+
+## deployment by docker
+    
+
