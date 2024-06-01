@@ -285,3 +285,40 @@ how to shift monolithic architechture to microsservice?
   2. api gate way kaj hole route defient kora
   3. every module alala kore fala
   
+## day 5 (system reliablity)
+  # distributed system
+    1. more likely fail
+    1. Failure can be 
+        a. Partial 
+        b. Independent
+
+  # failures in large scale distributed system
+    1. definition
+    2. charateristics
+       1. large number of componets
+       2. large number of componet instances
+   # types of failures
+      1. Partial Failures
+      2. Independent failures
+      3. single point of failures
+  # challenges in large scale distributed stystem
+      1. increased chance of partial failures
+      2. cascading effects
+      3. indetifying single point of failures
+      4. mitigation strategies
+   
+  ## Reliability Engineering (it is very hard)
+      1. Reliablity
+      2. Abaility
+      3. Fault Tolerance
+        ## fault tolerance design
+          1. Redundancy 
+          2. Fault Detection
+          3. Recovery
+  ## health check
+    1. ping base
+    2. heartbeat base
+  ## system stablity
+    1. timeout
+    2. Retries
+    3. circuit breaker
