@@ -1,8 +1,16 @@
-try to access database
+Try to access database: 
 ```
  sudo -u postgres psql
 ```
+show db: 
+```
 show database;
---\l
+```
+list of database:
+```
+\l
+```
 connect database:
---\c databasename
+```
+\c databasename
+```
