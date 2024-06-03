@@ -92,9 +92,9 @@ feadback-server:latest
 
 ## docker repository tag and name chnage/rename and prepare push docker hub:
 
-    docker tag name:tag 
+    docker tag name:tag
        exam:  docker tag localrepository  docker hub repostory
-       
+
     then rename korer por: docker push repositoryname:tagname(gowtamkumar/learn-docker:21)
     node: also you can same name build as like docker hub repository moto:
 
@@ -166,23 +166,23 @@ ip a
     mongodb://idAddress:27017/practice_mongodb
 
 ## local database show for mongodb;
-    mongosh --port 27018
-    show db: 
-        show dbs
-    use db: 
-        use mydatabase
-    show collection: 
-        show collections
-    table data show: 
-        db.products.find()
-## utility commond
-    # npm: this should be up this server by create a package json file by docker compose
-    #     build: ./
-    #     stdin_open: true
-    #     tty: true
-    #     volumes:
-    #       - ./:/usr/src/ap
 
-## deployment by docker
+    mongosh --port 27018
+    show db:
+        show dbs
+    use db:
+        use mydatabase
+    show collection:
+        show collections
+    table data show:
+        db.products.find()
+
+## docker database show for posgresql
+
+    docker exec -it db psql -U postgres (db meaingin container)
     
 
+## deployment by docker
+
+ run: docker compose -f compose.dev.yaml up --build
+ down: docker compose -f compose.dev.yaml down --build

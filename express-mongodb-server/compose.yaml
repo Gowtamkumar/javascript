@@ -38,7 +38,7 @@ volumes:
 #     stdin_open: true
 #     tty: true
 #     volumes:
-#       - ./:/usr/src/ap
+#       - ./:/usr/src/app
 
 # services:
 #   server:
@@ -66,6 +66,7 @@ volumes:
 #       - db-password
 #     volumes:
 #       - db-data:/var/lib/postgresql/data
+#       - ./uploads:/usr/src/app/uploads
 #     environment:
 #       - POSTGRES_DB=example
 #       - POSTGRES_PASSWORD_FILE=/run/secrets/db-password
