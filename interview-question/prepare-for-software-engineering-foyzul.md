@@ -25,3 +25,8 @@
     need to inproved cv, linkein, english, and technical knowledge, probling solving, online testing, communication
 
 reactjs, node js and framwork in details knowldege
+
+interview for preparation:
+```
+https://dev.to/novu/10-github-repositories-to-achieve-javascript-mastery-50hk?ref=dailydev
+```
