@@ -1,4 +1,4 @@
-🚀 𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 𝗖𝗼𝗻𝗰𝗲𝗽𝘁𝘀 𝗳𝗼𝗿 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄𝘀 🚀
+🚀 𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 concept 🚀
 
 𝟭. 𝗖𝗮𝗹𝗹𝗯𝗮𝗰𝗸𝘀: These are functions passed as arguments to other functions. They're called back later in the program.
 
@@ -28,6 +28,6 @@
 
 𝟭𝟰. 𝗣𝗼𝗹𝘆𝗳𝗶𝗹𝗹𝘀: This is code that implements a feature on web browsers that do not support the feature.
 
-15. weakSet:
-16. generator:
-17. weakMap:
+1.  weakSet:
+2.  generator:
+3.  weakMap:
