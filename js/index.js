@@ -52,4 +52,8 @@ do {
   console.log("aaa",i);
 } while (i < 10);
 
-console.log(10-10*10+10);
+// console.log(10-10*10+10);
+
+const timerId =setInterval(()=> console.log("start", new Date().getSeconds()), 1000)
+
+// setTimeout(()=> {clearInterval(timerId); alert("hello")}, 5000)
