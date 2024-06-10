@@ -23,7 +23,7 @@ IPerson.prototype = {
   },
 };
 
-Cricketer.prototype = Object.create(IPerson.prototype); // that mine cricketer ar moddha IPerson ar je prototype korea ache seta inherite kore niya aschi.
+Cricketer.prototype = Object.create(IPerson.prototype); // that mine cricketer ar moddha IPerson ar je prototype korea ache seta inherite kora hoyche.
 // if you want to be overight prototype constructor
 Cricketer.prototype.constructor = Cricketer; //right now this cricketer is prototype constructor
 Cricketer.prototype.play = function () {

@@ -34,7 +34,7 @@ Person.prototype = {
 };
 
 const newPerson = Person("gowtam kumar", 30);
-// console.log(newPerson.eat());
+// console.log("dd",newPerson.eat());
 
 // new keyword example below
 function PersonNew(name, age) {
