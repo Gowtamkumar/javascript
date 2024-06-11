@@ -322,7 +322,8 @@ how to shift monolithic architechture to microsservice?
     1. timeout
     2. Retries
     3. circuit breaker
-## application security 
+## day 6
+  ## application security 
   # firewall intregation
   # network security
   # encryption: 
@@ -335,3 +336,7 @@ how to shift monolithic architechture to microsservice?
   # VPN
   # firewall
   # authentication,authorization & RBAC
+
+## day 7
+  # technology stack discussion
+  <!-- own -->
