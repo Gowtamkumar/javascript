@@ -1,61 +1,63 @@
-// class CircularQueue {
-//   constructor() {
-//     this.queue = [];
-//     this.size = 5;
-//     this.head = 0;
-//     this.tail = 0;
-//   }
+class CircularQueue {
+  constructor(size) {
+    this.items = [];
+    this.size = size;
+    this.head = 0;
+    this.tail = 0;
+  }
+  enqueue(item) {
+    if (this.isFull()) {
+      console.log(`this circular queue is full`);
+      return;
+    }
 
-//   isFull() {
-//     if (this.tail - this.head === this.size) {
-//       console.log("This queue is full!");
-//     }
-//   }
+    this.tail = (this.tail + 1) % this.size;
+    this.items[this.tail] = item;
+  }
+  dequeue() {
+    if (this.isEmpty()) {
+      console.log(`this circular queue is Empty`);
+      return;
+    }
 
-//   enqueue(value) {
-//     if (this.isFull()) {
-//       return this.isFull();
-//     }
-//     this.queue[this.tail] = value;
-//     this.tail = (this.tail + 1) % (this.size + 1);
-//   }
+    this.head = (this.head + 1) % (this.size + 1);
+    delete this.items[this.head];
+  }
 
-//   isEmpty() {
-//     if (this.tail - this.head === 0) {
-//       console.log("this queue is Empty");
-//     }
-//   }
+  isFull() {
+    return (this.tail + 1) % this.size === this.head;
+  }
 
-//   dequeue() {
-//     if (this.isEmpty()) {
-//       return this.isEmpty();
-//     }
-//     delete this.queue[this.head];
-//     this.head = (this.head + 1) % (this.size + 1);
-//   }
+  isEmpty() {
+    if (this.head === this.tail) {
+      return true;
+    }
+  }
 
-//   isSize() {
-//     console.log("queue is is: ", this.tail - this.head);
-//   }
+  print() {
+    return this.items.toString();
+  }
+  isSize() {
+    console.log(`circular queue is size:`, this.tail - this.head);
+  }
 
-//   print() {
-//     return this.queue.toString();
-//   }
-// }
+  peek() {
+    if (this.isEmpty()) {
+      console.log(`this circular queue is Empty`);
+      return;
+    }
+    return this.items[this.head];
+  }
+}
 
-// const res = new CircularQueue();
-// res.enqueue(20);
-// res.enqueue(10);
-// res.enqueue(30);
-// res.enqueue(30);
-// res.enqueue(30);
-// console.log("🚀 ~ res.print();:", res.print());
-// res.dequeue();
-// res.dequeue();
-// res.dequeue();
-// res.dequeue();
-// res.dequeue();
-// res.isSize();
-// res.dequeue();
-// // console.log("print", res.print());
-// console.log("🚀 ~ res:", res);
+const result = new CircularQueue(3);
+// console.log("🚀 ~ result:", result);
+result.enqueue(20);
+result.enqueue(300);
+result.enqueue(28);
+console.log("🚀 ~ result:", result);
+// result.enqueue(28);
+// result.dequeue();
+// result.dequeue();
+// result.dequeue();
+console.log("🚀 ~ result:", result);
