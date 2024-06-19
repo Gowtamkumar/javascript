@@ -1,3 +1,135 @@
+class Node {
+  constructor(value) {
+    this.data = value;
+    this.next = null;
+  }
+}
+
+class LinkList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
+  // linklist a first add kora
+  preAppend(value) {
+    const newNode = new Node(value);
+    if (!newNode) {
+      console.log("new node is not create");
+      return;
+    }
+    if (this.size == 0) {
+      this.head = newNode;
+      this.size++;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+      this.size++;
+    }
+  }
+
+  remove(value) {
+    if (this.head.data == value) {
+      this.head = this.head.next;
+      this.size--;
+      return;
+    }
+
+    let current = this.head;
+
+    while (current.next != null) {
+      if (current.next.data === value) {
+        this.size--;
+        break;
+      }
+      current = current.next;
+    }
+
+    if (current == null) {
+      return this.head;
+    }
+    current.next = current.next.next;
+  }
+  //link list a last add kora
+  append(value) {
+    const newNode = new Node(value);
+    if (this.head == null) {
+      this.head = newNode;
+      this.size++;
+      return;
+    }
+    let current = this.head;
+    while (current.next != null) {
+      current = current.next;
+    }
+    current.next = newNode;
+    this.size++;
+  }
+
+  // insert 
+  insert(value, whereInsert) {
+    const addNewNode = new Node(value);
+
+    if (!newNode) {
+      console.log("new node is not create");
+      return;
+    }
+
+    if (this.size == 0) {
+      this.head = addNewNode;
+      this.size++;
+    }
+
+    let current = this.head;
+    while (current.next != null) {
+      if (current.data == whereInsert) {
+        break;
+      }
+      current = current.next;
+    }
+
+    addNewNode.next = current.next;
+    current.next = addNewNode;
+  }
+
+  // traversal
+
+  print() {
+    let current = this.head;
+    while (current != null) {
+      console.log(current.data);
+      current = current.next;
+    }
+  }
+  peek(value) {
+    let current = this.head;
+    while (current.next != null) {
+      if (current.next.data == value) {
+        break;
+      }
+      current = current.next;
+    }
+    if (current.next == null) {
+      console.log("not found");
+      return;
+    }
+    console.log(current.next);
+  }
+}
+
+const resutl = new LinkList();
+resutl.preAppend(10);
+resutl.preAppend(11);
+resutl.preAppend(30);
+resutl.preAppend(40);
+resutl.append(22);
+resutl.append(44);
+resutl.print();
+// resutl.remove(22);
+// resutl.peek(22);
+resutl.insert(99, 22);
+console.log("ddd");
+resutl.print();
+
 // class Node {
 //   constructor(value) {
 //     this.data = value;
