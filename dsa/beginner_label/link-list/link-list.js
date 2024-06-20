@@ -69,7 +69,7 @@ class LinkList {
   insert(value, whereInsert) {
     const addNewNode = new Node(value);
 
-    if (!newNode) {
+    if (!addNewNode) {
       console.log("new node is not create");
       return;
     }
@@ -85,6 +85,10 @@ class LinkList {
         break;
       }
       current = current.next;
+    }
+
+    if(current.next == null){
+      return this.head
     }
 
     addNewNode.next = current.next;
@@ -121,14 +125,14 @@ resutl.preAppend(10);
 resutl.preAppend(11);
 resutl.preAppend(30);
 resutl.preAppend(40);
-resutl.append(22);
-resutl.append(44);
+// resutl.append(22);
+// resutl.append(44);
 resutl.print();
 // resutl.remove(22);
 // resutl.peek(22);
-resutl.insert(99, 22);
-console.log("ddd");
-resutl.print();
+// resutl.insert(99, 22);
+// console.log("ddd");
+// resutl.print();
 
 // class Node {
 //   constructor(value) {
