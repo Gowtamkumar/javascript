@@ -47,13 +47,29 @@ let i = 0;
 //     i++;
 // }
 
-do {
-    i++;
-  console.log("aaa",i);
-} while (i < 10);
+// do {
+//   i++;
+//   console.log("aaa", i);
+// } while (i < 10);
 
 // console.log(10-10*10+10);
 
-const timerId =setInterval(()=> console.log("start", new Date().getSeconds()), 1000)
+// const timerId = setInterval(
+//   () => console.log("start", new Date().getSeconds()),
+//   1000
+// );
 
 // setTimeout(()=> {clearInterval(timerId); alert("hello")}, 5000)
+
+// const str = "hello world"; //word reverse
+// console.log(str.split('').reverse().join(''));
+
+// const user = {name: "Alice", age: 33, email: "ghw@gmail.com"}
+// const hasEmail = "email" in user
+// console.log("🚀 ~ hasEmail:", hasEmail)
+
+// console.log(typeof typeof 1); // result string
+
+const numbers = [1,2,3,4,5,6]
+numbers[11] = 500
+console.log(numbers.length);
