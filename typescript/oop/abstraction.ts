@@ -1,11 +1,12 @@
- class Charater {
+// if you use abstract keyword before class and method you can not access and can not create instant
+class Charater {
   public firstName: string;
   public lastName: string;
   constructor(firstName: string, lastName: string) {
     (this.firstName = firstName), (this.lastName = lastName);
   }
   // abstract getStrict(): number;
-  FullName(): string {
+  fullName(): string {
     return `${this.firstName} + ${this.lastName}`;
   }
 }
@@ -23,4 +24,4 @@ class FullTimeEmployee extends Charater {
 
 const result = new FullTimeEmployee("Gowtam", "kumar", 50); // you can use this method Charater class
 
-console.log(result.FullName());
+console.log(result.fullName());
