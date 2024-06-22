@@ -1,12 +1,13 @@
- class Hero {
+class Hero {
   constructor(name, power) {
     this.name = name;
     this.power = power;
   }
-
+  // method
   getPower() {
     return this.power;
   }
+  // method
   goForGrocery(budget) {
     if (this.power && budget > 500) {
       console.log(this.getPower());

@@ -1,5 +1,3 @@
-//  abstract method class instant create kore access
-//  kora jai na but ohter class inheritance kore access kora jai
  class Charater {
   public firstName: string;
   public lastName: string;
