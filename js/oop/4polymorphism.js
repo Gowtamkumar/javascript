@@ -1,6 +1,7 @@
 // polymorphism holo onk structure, onk shap,
 // ploymorphism holo parent class ke overright kore. onk somy deka jai parent a function ache but 2 rokom kaj korte hobe tokhon same function call kore overright kore fala that mean shap alada hobe
 // jodi private kono data jodi parant class thake user korte hoy tahole getter user kora jete pare
+// if you use abstract keyword before class and method you can not access and can not create instant 
 class SmartDevice {
   #name;
   #price;
