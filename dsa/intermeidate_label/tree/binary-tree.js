@@ -39,12 +39,34 @@ class BinaryTree {
       }
     }
   }
+  preOrderTraversal(root) {
+    if (root != null) {
+      console.log("left", root.value);
+      this.preOrderTraversal(root.left);
+      this.preOrderTraversal(root.right);
+    }
+  }
+  postOrderTraversal(root) {
+    if (root.left != null) {
+      this.postOrderTraversal(root.left);
+    }
+    if (root.right != null) {
+      this.postOrderTraversal(root.right);
+      console.log(root.value);
+    }
+    console.log(root.value);
+  }
 }
 
 const result = new BinaryTree();
 result.insert(10);
+result.insert(19);
 result.insert(11);
 result.insert(20);
-result.insert(10);
+result.insert(1);
+result.insert(3);
+result.insert(2);
 
+result.preOrderTraversal(result.root);
 console.log("🚀 ~ result:", result);
+result.postOrderTraversal(result.root);
