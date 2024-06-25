@@ -340,3 +340,21 @@ how to shift monolithic architechture to microsservice?
 ## day 7
   # technology stack discussion
   <!-- own -->
+
+
+
+## day 8
+  ## system design interview
+    # interview Structure
+      1. requirement clarification
+         1. functional requirement
+         2. non-functional requirement
+         3. Extended requirments
+      2. Estimation and constrianints
+      3. data model design
+      4. api design
+      5. high level component design
+      6. detailed component design
+      7. idetify & resolve bottlenecks
+  ## Case Study-1 for system design
+   
