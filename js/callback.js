@@ -1,4 +1,4 @@
-function calculation(value, callbackFun) {
+function calculation(value, callbackFun) {  // callbackFun is callback function and calculation is heigher order function
   const sumv = 10 + value;
   return callbackFun(sumv);
 }
