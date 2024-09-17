@@ -1,4 +1,4 @@
-const sum = require("./sum");
+const { sum, myFunction } = require("./sum");
 
 test("adds 1 +2 sum is 3", () => {
   expect(sum(1, 2)).toBe(3);
@@ -17,15 +17,21 @@ test("object assigment", () => {
   expect(data).toEqual({ one: 1, two: 2 });
 });
 
-
 // boolean testing
 
-test("null is falsy", ()=> {
-  const n = 0 // 0/ false;
-  expect(n).toBeFalsy()
-})
+test("null is falsy", () => {
+  const n = 0; // 0/ false;
+  expect(n).toBeFalsy();
+});
 
-test("null is truthy", ()=> {
-  const n = 1 //1, true;
-  expect(n).toBeTruthy()
-})
+test("null is truthy", () => {
+  const n = 1; //1, true;
+  expect(n).toBeTruthy();
+});
+
+// error throw
+test("error throw", () => {
+  expect(() => {
+    myFunction("kkk");
+  }).toThrow();
+});
