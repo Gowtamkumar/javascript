@@ -1,4 +1,4 @@
-const { sum, myFunction } = require("./sum");
+const { sum, myFunction, fetchData, fetchPromise } = require("./sum");
 
 test("adds 1 +2 sum is 3", () => {
   expect(sum(1, 2)).toBe(3);
@@ -34,4 +34,27 @@ test("error throw", () => {
   expect(() => {
     myFunction("kkk");
   }).toThrow();
+});
+
+test("testing a callback fun", (done) => {
+  function callback(data) {
+    try {
+      expect(data).toBe("testing callback");
+      done();
+    } catch (error) {
+      done(error);
+    }
+  }
+
+  fetchData(callback);
+});
+
+// promise fun resolve
+test("testing for promise", () => {
+  return expect(fetchPromise()).resolves.toBe("testing for promise");
+});
+
+// promise fun reject
+test("testing for promise is error", () => {
+  return expect(fetchPromise()).rejects.toThrow("error");
 });
