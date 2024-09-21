@@ -69,5 +69,6 @@ test("the data is testing asynchronous", async () => {
 // mock function and spies
 test("mock inplemtation of a basic function", () => {
   const mockCallback = jest.fn((x) => 42 + x);
-  expect(mockCallback(1)).toBe(43)
+  expect(mockCallback(2)).toBe(44);
+  expect(mockCallback).toHaveBeenCalledWith(2);
 });
