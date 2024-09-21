@@ -72,3 +72,15 @@ test("mock inplemtation of a basic function", () => {
   expect(mockCallback(2)).toBe(44);
   expect(mockCallback).toHaveBeenCalledWith(2);
 });
+
+test("spying on a method of an object", ()=> {
+  const video = {
+    play(){
+      return true
+    }
+  }
+  const spy = jest.spyOn(video, 'play');
+  video.play()
+  expect(spy).toHaveBeenCalled()
+  spy.mockRestore();
+})
