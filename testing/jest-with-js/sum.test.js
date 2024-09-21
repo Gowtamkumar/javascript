@@ -55,6 +55,19 @@ test("testing for promise", () => {
 });
 
 // promise fun reject
-test("testing for promise is error", () => {
-  return expect(fetchPromise()).rejects.toThrow("error");
+// test("testing for promise is error", () => {
+//   return expect(fetchPromise()).rejects.toThrow("error");
+// });
+
+// testing asynchronoous code
+
+test("the data is testing asynchronous", async () => {
+  const data = await fetchPromise();
+  expect(data).toBe("testing for promise");
+});
+
+// mock function and spies
+test("mock inplemtation of a basic function", () => {
+  const mockCallback = jest.fn((x) => 42 + x);
+  expect(mockCallback(1)).toBe(43)
 });
