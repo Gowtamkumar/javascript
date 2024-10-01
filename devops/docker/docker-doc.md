@@ -186,3 +186,15 @@ ip a
 
  run: docker compose -f compose.dev.yaml up --build
  down: docker compose -f compose.dev.yaml down --build
+
+ ## Linux system administraction essentials
+    
+   this system This file stores essential information about system users: cat /etc/passwd
+   ## etc path ar moddha user, group, password all existing thake
+
+   note: group crate then role permission
+    ## group crate
+    commond: sudo groupadd test_group
+    ## group see commend
+    commond: cat /etc/group
+
