@@ -43,3 +43,7 @@ main domin set:
   jodi /var/www/html/gowtam kore dile root http://192.168.1.202/ viste korle root hisaba visite hobe
 
 virtual host configuration web server with multiple application: 
+  /etc/nginx/sites-available moddha ja gowtamkumar.com enginx configration ditehobe proxcy modda. we can searech google and chatgpt for configaration;
+
+ execute able access commond: sudo chmod +x deployment.sh 
+  execute commomd: ./deployment.sh
