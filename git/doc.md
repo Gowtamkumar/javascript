@@ -21,4 +21,5 @@ git reset [file]: Discards changes to a file.
 git commit -m: Commits changes with a message.
 git add [file]: Stages a file for commit.
 
+
 also we can study in https://www.w3schools.com/git/
