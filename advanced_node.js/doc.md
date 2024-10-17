@@ -9,3 +9,4 @@
 8. search and discovery stories
 9. note creation stories
 10. notification stories
+that mine requirement analytics
