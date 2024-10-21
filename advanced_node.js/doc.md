@@ -112,5 +112,10 @@ discouse robust application
     2. 0auth/0auth2
        1. enables users to grant third-party application access to their data without sharing password.
        2. popular for login mechanisms like "Sign in with google"/"sign in with facebook" (passport.js)
+     
+ ## .Understanding Commitstreams' GitHub Integration: An OAuth Data Flow Diagram
+ ## GitHub OAuth Integration Demystified: A Server-Side Code Walkthrough
+
+
       
      
