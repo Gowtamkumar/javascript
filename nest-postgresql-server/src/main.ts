@@ -14,6 +14,9 @@ async function bootstrap() {
     logger: getLogLevels(process.env.NODE_ENV === 'production'),
   });
 
+  const API_PREFIX = 'api/v1'; // You can customize this prefix
+  app.setGlobalPrefix(API_PREFIX);
+
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true, //we can whitelist the acceptable properties, and any property not included in the whitelist is automatically stripped from the resulting object. For example, if our handler expects email and password properties, but a request also includes an age property, this property can be automatically removed from the resulting DTO
