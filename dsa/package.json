@@ -1,0 +1,16 @@
+{
+  "name": "dsa",
+  "version": "1.0.0",
+  "description": "# Datastracture module     1.Array     2.Link list(single, dobule, sirculer)     3.Stack(lifo)     4.Queue(fifo)     5.Hash table     6.Tree     7.Graph",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

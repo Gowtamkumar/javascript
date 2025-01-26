@@ -12,6 +12,7 @@
 
 # Algorithom module
     1.Search Algorithom
+        1. liner search
     2.Sorting algorithom
     3.Time complexity
     4.Divide and Conquer
